@@ -1,0 +1,32 @@
+
+<%- include('common/header') %>
+<div class="container">
+
+
+
+    <h1>Personas</h1>
+
+
+        <% for (let p of data){ %>
+            <ul>
+                <li><strong><%= p.name%></strong>
+                        <ul>
+                            <li> <i><%= p.email%></i>  </li>
+                            <li> <%= p.telephone%> </li>
+
+                        </ul>
+                </li>
+            </ul>
+            <hr>
+
+        <% } %>
+
+
+
+
+
+
+
+        <%- include('common/footer')%>
+
+</div>
