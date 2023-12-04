@@ -2,6 +2,7 @@
 <%- include('common/header') %>
 <div class="container">
 
+    
 
 
     <h1>Personas</h1>
@@ -9,24 +10,27 @@
 
         <% for (let p of data){ %>
             <ul>
-                <li><strong><%= p.name%></strong>
-                        <ul>
-                            <li> <i><%= p.email%></i>  </li>
-                            <li> <%= p.telephone%> </li>
+                <li class="d-flex justify-content-between "><strong><%= p.name%></strong>
+                    <a class="btn btn-primary" href="./detalle/<%= p._id %>" role="button">Detalle</a>
 
-                        </ul>
+                    
                 </li>
             </ul>
             <hr>
 
+
         <% } %>
 
+        <a class="btn btn-warning" href="./new" role="button">Crea nueva persona</a>
 
 
 
 
 
 
-        <%- include('common/footer')%>
+
+
+       
 
 </div>
+<%- include('common/footer')%>

@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const apiRoutes = require('./routes/api.route');
 const personas = require('./routes/personas/personas');
 const path = require('path');
+const methodOverride = require('method-override');
 
 const app = express();
 
@@ -12,9 +13,11 @@ const app = express();
 //middleware
 app.use(morgan('dev'));
 app.use(express.json());
+app.use(express.urlencoded());
 app.set('view engine' , 'ejs');
 app.set('views' , path.join(__dirname , '/views'));
 app.use(express.static(path.join(__dirname,'/public')));
+app.use(methodOverride('_method'));
 
 
 //routes

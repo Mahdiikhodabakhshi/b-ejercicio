@@ -1,0 +1,42 @@
+
+<%- include('common/header') %>
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-5">
+
+             
+
+
+    <h1>Persona <%= data._id %></h1>
+
+
+            <div >
+                <ul class="d-block ">
+                    <li><strong><%= data.name%></strong></li>
+                    <li><strong><%= data.email%></strong></li>
+
+                    <li><strong><%= data.telephone%></strong></li>
+
+                </ul>
+        
+                <hr>
+                <a class="btn btn-primary" href="../" role="button">Volver a la lista</a>
+            </div>
+        </div>
+   
+
+
+    </div>
+
+
+
+
+
+
+
+       
+
+</div>
+<%- include('common/footer')%>

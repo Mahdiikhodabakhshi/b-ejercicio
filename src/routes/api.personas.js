@@ -36,10 +36,10 @@ route.delete('/:id' , async (req, res) =>{
 });
 
 route.patch('/:id' , async (req, res) =>{
-    const person = req.body;
+    const {name , email , telephone } = req.body;
     await  personaModel.findByIdAndUpdate(
         req.params.id,
-        {$set : person}
+        {$set :  {name , email , telephone}}
     )
         .then((data) =>{
             if (data != null) res.json({status : `person with id ${req.params.id} updated!!`})
