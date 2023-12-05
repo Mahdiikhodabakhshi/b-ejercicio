@@ -2,22 +2,22 @@
 <%- include('common/header') %>
 <div class="container">
 
-    <h1>Crea nueva persona</h1>
+    <h1>modificar la persona</h1>
 
 
-    <form action="/personas/" method="post">
+    <form action="/personas/<%= data._id %>?_method=PATCH" method="post">
         <div class="mb-3">
             <label for="name" class="form-label">Nombre</label>
-            <input type="text" name="name" class="form-control" id="name">
+            <input type="text" name="name" value="<%= data.name %>" class="form-control" id="name">
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">Correo electrico</label>
-            <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
+            <input type="email" name="email" value="<%= data.email %>" class="form-control" id="email" aria-describedby="emailHelp">
             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
           </div>
           <div class="mb-3">
             <label for="telephone" class="form-label">Telefono</label>
-            <input type="number" name="telephone" class="form-control" id="telephone">
+            <input type="number" name="telephone" value="<%= data.telephone %>" class="form-control" id="telephone">
           </div>
        
         
@@ -27,7 +27,7 @@
       </form>
     
 
-    <a class="btn btn-primary" href="./" role="button">Volver a la lista</a>
+    <a class="btn btn-primary" href="../detalle/<%= data._id %>" role="button">Volver a la detalle</a>
 
        
 

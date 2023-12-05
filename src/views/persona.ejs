@@ -22,7 +22,16 @@
                 </ul>
         
                 <hr>
-                <a class="btn btn-primary" href="../" role="button">Volver a la lista</a>
+                <div class="d-flex">
+
+                    <a class="btn btn-primary mx-2" href="../" role="button">Volver a la lista</a>
+                    <a class="btn btn-success mx-2" href="../edit/<%= data._id %>" role="button">Edit information</a>
+
+                <form method="post" action="../<%= data._id %>?_method=DELETE">
+                    <button class="btn btn-danger mx-2">DELETE</button>
+                </form>
+                </div>
+                
             </div>
         </div>
    
