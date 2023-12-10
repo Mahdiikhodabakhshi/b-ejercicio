@@ -1,0 +1,35 @@
+
+<%- include('common/header') %>
+<div class="container">
+
+    <h1>Crea nueva tarea</h1>
+
+
+    <form action="/tareas/" method="post">
+        <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" name="name" class="form-control" id="name">
+          </div>
+          <div class="mb-3">
+            <label for="location" class="form-label">Ubicacion</label>
+            <input type="text" name="location" class="form-control" id="location" >
+            
+          </div>
+          <div class="mb-3">
+            <label for="hour" class="form-label">horas</label>
+            <input type="text" name="hour" class="form-control" id="hour">
+          </div>
+       
+        
+        
+        <button type="submit" value="submit" class="btn btn-success">Añadir</button> <br><hr>
+
+      </form>
+    
+
+    <a class="btn btn-primary" href="./" role="button">Volver a la lista</a>
+
+       
+
+</div>
+<%- include('common/footer')%>

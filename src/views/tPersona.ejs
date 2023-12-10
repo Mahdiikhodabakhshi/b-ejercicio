@@ -1,0 +1,33 @@
+
+<%- include('common/header') %>
+<div class="container">
+
+    
+
+
+    <h1> nueva tarea para persona </h1>
+
+
+
+       
+    <form action="../<%= id %>?_method=PATCH" method="post">
+        <label for="tarea">elegir una tarea</label>
+        <select name="tarea" id="tarea">
+            <% data.forEach(tarea => { %>
+             <option value= "<%= tarea.name %>" >  <%= tarea.name %>    </option>
+            <% }) %>
+          
+          
+        </select>
+        <br><br>
+        <button type="submit" value="submit" class="btn btn-success">Submit</button>
+      </form>
+
+
+
+
+
+       
+
+</div>
+<%- include('common/footer')%>

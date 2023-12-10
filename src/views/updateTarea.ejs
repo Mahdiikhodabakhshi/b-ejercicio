@@ -1,0 +1,35 @@
+
+<%- include('common/header') %>
+<div class="container">
+
+    <h1>modificar la tarea</h1>
+
+
+    <form action="/tareas/<%= data._id %>?_method=PATCH" method="post">
+        <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" name="name" value="<%= data.name %>" class="form-control" id="name">
+          </div>
+          <div class="mb-3">
+            <label for="location" class="form-label">Ubication</label>
+            <input type="text" name="location" value="<%= data.location %>" class="form-control" id="location" >
+            
+          </div>
+          <div class="mb-3">
+            <label for="hour" class="form-label">Horas</label>
+            <input type="text" name="hour" value="<%= data.hour %>" class="form-control" id="hour">
+          </div>
+       
+        
+        
+        <button type="submit" value="submit" class="btn btn-success">Actualizar</button> <br><hr>
+
+      </form>
+    
+
+    <a class="btn btn-primary" href="../detalle/<%= data._id %>" role="button">Volver a la detalle</a>
+
+       
+
+</div>
+<%- include('common/footer')%>

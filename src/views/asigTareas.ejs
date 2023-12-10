@@ -1,0 +1,61 @@
+
+<%- include('common/header') %>
+<div class="container">
+
+    
+
+
+    <h1> Asignaciones de las Personas</h1>
+
+
+       
+    <% for (let p of result){ %>
+        <ul>
+            <li class=""><strong><%= p.name%></strong> <br>
+               <% if (p.detalle_personas) { %>
+                <% for( let i = 0; i < p.detalle_personas.length; i++ ) { %>
+                        <ul>
+                                    <li> <%= p.detalle_personas[i].name %> - <%=p.detalle_personas[i].email %> - <%= p.detalle_personas[i].telephone %> 
+                                        <form method="post" action="./<%= p._id %>/<%= p.detalle_personas[i].name %>?_method=PATCH">
+                                            <button class="btn btn-danger mx-2">DELETE</button>
+                                        </form> 
+
+                                        
+                                      
+
+                                   
+                                </ul>
+                <% } %>    
+                
+                
+               <% } %>
+
+        </ul>
+
+        <!-- TODO -->
+        <a class="btn btn-info" href="./new/<%= p._id %>">añadir nueva tarea para persona</a>
+
+    <% } %>
+
+
+           
+
+
+
+            <hr>
+
+            
+
+
+
+       
+
+
+
+
+
+
+       
+
+</div>
+<%- include('common/footer')%>
