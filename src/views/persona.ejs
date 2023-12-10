@@ -18,6 +18,14 @@
                     <li><strong><%= data.email%></strong></li>
 
                     <li><strong><%= data.telephone%></strong></li>
+                    <li><strong>Tareas:</strong>
+                        <% for( let i = 0; i < data.tarea.length; i++ ) { let n = i ; %>
+                            <ul style="list-style-type: none;">    
+                                <li> <%= n+1 %>: <%= data.tarea[i] %>  </li>
+                            </ul>
+                        <% } %>
+                        
+                    </li>
 
                 </ul>
         

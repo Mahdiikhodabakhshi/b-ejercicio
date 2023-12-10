@@ -1,0 +1,7 @@
+.img-fluid{
+transition: ease-in-out 1s all;
+}
+
+.img-fluid:hover{
+    transform: scale(110%);
+}

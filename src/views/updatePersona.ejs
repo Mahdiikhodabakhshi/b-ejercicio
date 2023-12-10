@@ -19,6 +19,15 @@
             <label for="telephone" class="form-label">Telefono</label>
             <input type="number" name="telephone" value="<%= data.telephone %>" class="form-control" id="telephone">
           </div>
+          <div class="mb-3">
+            <label for="task" class="form-label">Tarea</label>
+
+            <% data.tarea.forEach(element => { %>
+             <input type="text " name="tarea" value="<%= element %>" class="form-control mb-2" id="task">
+            <% }) %>
+
+            
+          </div>
        
         
         
