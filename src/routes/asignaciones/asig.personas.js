@@ -40,7 +40,7 @@ router.patch('/:id/:s' ,async (req , res) =>{
     
     const datos = await personaModel.findById(id);
     
-   datos.tarea.splice(s , 1);
+   datos.tarea=datos.tarea.filter((t)=>t!=s);
    await datos.save()
     .then((data)=>{
        // console.log(data.tarea[index]);
